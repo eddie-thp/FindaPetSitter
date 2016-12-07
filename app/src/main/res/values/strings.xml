@@ -12,6 +12,7 @@
 
     <!-- Notification -->
     <string name="notification_pet_sitting_request_title">Pet sitting request from: %s</string>
+    <string name="notification_pet_sitting_response_title">Pet sitting response from: %s</string>
 
     <!-- SingUp Activity strings -->
     <string name="toolbar_title_sign_up">Sign Up</string>

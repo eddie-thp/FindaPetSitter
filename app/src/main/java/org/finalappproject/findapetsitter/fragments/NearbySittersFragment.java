@@ -253,6 +253,7 @@ public class NearbySittersFragment extends Fragment implements GoogleMap.OnMarke
         // Setup map settings
         if (mMap != null) {
             UiSettings settings = mMap.getUiSettings();
+            settings.setMyLocationButtonEnabled(true);
             settings.setScrollGesturesEnabled(scrollGestureEnabled);
         }
     }
