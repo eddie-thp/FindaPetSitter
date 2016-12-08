@@ -19,6 +19,7 @@ import org.finalappproject.findapetsitter.R;
 import org.finalappproject.findapetsitter.model.Pet;
 import org.finalappproject.findapetsitter.model.Request;
 import org.finalappproject.findapetsitter.model.User;
+import org.finalappproject.findapetsitter.pushmessage.PushMessageHelper;
 import org.finalappproject.findapetsitter.util.ImageHelper;
 
 import java.text.SimpleDateFormat;
@@ -209,6 +210,7 @@ public class RequestDetailActivity extends AppCompatActivity implements GetCallb
     @Override
     public void done(ParseException e) {
         if (e == null) {
+            PushMessageHelper.pushNotifyNewRequest(mRequest, false);
             finish();
         } else {
             Log.e(LOG_TAG, "Failed to send response", e);

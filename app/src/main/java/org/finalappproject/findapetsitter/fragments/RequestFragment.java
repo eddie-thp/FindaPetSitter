@@ -151,7 +151,7 @@ public class RequestFragment extends DialogFragment implements CalendarPickerDia
         if (e == null) {
             Toast.makeText(mContext, "Request sent", Toast.LENGTH_LONG).show();
 
-            PushMessageHelper.pushNotifyNewRequest(newRequest);
+            PushMessageHelper.pushNotifyNewRequest(newRequest, true);
 
         } else {
             Log.e(LOG_TAG, "Failed to send request", e);

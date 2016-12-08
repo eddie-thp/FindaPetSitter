@@ -42,10 +42,11 @@ public abstract class PushMessageHelper {
         });
     }
 
-    public static void pushNotifyNewRequest(Request request) {
+    public static void pushNotifyNewRequest(Request request, boolean isRequest) {
         Map<String, String> data = new HashMap<>();
         data.put(KEY_REQUEST_OBJECT_ID, request.getObjectId());
-        push(request.getReceiver(), data);
+        User toUser = (isRequest ? request.getReceiver() : request.getSender());
+        push(toUser, data);
     }
 
 }
